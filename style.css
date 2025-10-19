@@ -118,48 +118,72 @@ body {
     text-shadow: 0 0 #ff2770, 0 0 25px #ff2770;
 }
 
-.loginBox input{
-    width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    /* border: none; */
-    font-size: 1rem;
-    color: #fff;
-    background: #0000001a;
-    border: 2px solid #fff;
-    border-radius: 30px;
+.inputGroup {
+  position: relative;
+  width: 100%;
 }
 
-.loginBox input::placeholder{
-    color: #888;
+.inputGroup i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #45f3ff;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px 40px;
+  margin-top: 10px;
+  border-radius: 30px;
+  border: 2px solid #45f3ff;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.inputGroup input:focus {
+  box-shadow: 0 0 10px #45f3ff;
+}
+
+.remember {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
 }
 
 .loginBox input[type="submit"] {
-    background: #45f3ff;
-    border: none;
-    font-weight: 500;
-    color: #111;
-    cursor: pointer;
-    transition: 0.5s;
+  background: #45f3ff;
+  border: none;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
 }
 
 .loginBox input[type="submit"]:hover {
-    box-shadow: 0 0 10px #45f3ff, 0 0 60px #45f3ff;
+  box-shadow: 0 0 10px #45f3ff, 0 0 40px #45f3ff;
 }
 
-.group {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.credit {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
 }
 
-.group a {
-    color: white;
-    text-decoration: none;
+.credit span {
+  color: #ff2770;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ff2770, 0 0 25px #ff2770;
 }
-
-.group a:nth-child(2){
-    color: #ff2770;
-    font-weight: 600;
-}
-
