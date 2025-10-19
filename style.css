@@ -18,7 +18,7 @@ body {
   initial-value: 0deg;
 }
 
-/* Khung chính to sẵn, không thu/phóng khi hover */
+/* 🔹 Khung to sẵn, không còn hover */
 .box {
   position: relative;
   width: 450px;
@@ -76,6 +76,7 @@ body {
   border: 8px solid #25252b;
 }
 
+/* 🔹 Login form luôn hiển thị đầy đủ */
 .login {
   position: absolute;
   inset: 40px;
@@ -100,7 +101,7 @@ body {
   flex-direction: column;
   gap: 25px;
   width: 80%;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 .loginBox h2 {
@@ -108,6 +109,7 @@ body {
   letter-spacing: 0.2rem;
   font-weight: 600;
   font-size: 1.6rem;
+  color: #9aff9a;
 }
 
 .loginBox h2 i {
@@ -145,9 +147,9 @@ body {
   box-shadow: 0 0 10px #45f3ff;
 }
 
-/* Bỏ phần ghi nhớ đăng nhập */
+/* 🔹 Ẩn hoàn toàn phần "ghi nhớ đăng nhập" */
 .remember {
-  display: none;
+  display: none !important;
 }
 
 .loginBox input[type="submit"] {
