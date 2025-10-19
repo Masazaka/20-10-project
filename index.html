@@ -42,9 +42,11 @@
 
       const password = document.getElementById("password").value.trim();
 
-      if (password === "20/10/2025") {
+      if (password === "20/10/2025" ) {
         // ✅ Đăng nhập đúng -> chuyển thẳng không hỏi
         window.location.href = "https://masazaka.github.io/MAIN/";
+      } else if (password === "18102025" && text === "yukimatsazuka") { 
+        window.location.href = "https://masazaka.github.io/GAME/";
       } else {
         alert("Sai mật khẩu! Vui lòng thử lại.");
       }
@@ -52,3 +54,4 @@
   </script>
 </body>
 </html>
+
