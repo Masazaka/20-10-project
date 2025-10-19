@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuki Hub/title>
+  <title>Yuki Hub</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,9 +11,11 @@
   <div class="box">
     <div class="login">
       <div class="loginBox">
-        <h2><img src="myicon.png" alt="icon" class="login-icon">
-            Yuki Hub
+        <h2>
+          <img src="myicon.png" alt="icon" class="login-icon">
+          Yuki Hub
         </h2>
+
         <form id="loginForm">
           <div class="inputGroup">
             <i class="fa-solid fa-user"></i>
@@ -24,9 +26,8 @@
             <input type="password" id="password" placeholder="Mật khẩu" required>
           </div>
 
-          <div class="remember">
-            <label><input type="checkbox"> Ghi nhớ đăng nhập</label>
-          </div>
+          <!-- Bỏ phần ghi nhớ -->
+          <div class="remember" style="display:none;"></div>
 
           <input type="submit" value="Đăng nhập">
         </form>
@@ -42,10 +43,11 @@
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault(); // chặn reload trang
 
-      const password = document.getElementById("password").value;
+      const password = document.getElementById("password").value.trim();
 
       if (password === "20/10/2025") {
-        window.location.href = "https://masazaka.github.io/MAIN/"; // chuyển sang web khác
+        // ✅ Đăng nhập đúng -> chuyển thẳng không hỏi
+        window.location.href = "https://masazaka.github.io/MAIN/";
       } else {
         alert("Sai mật khẩu! Vui lòng thử lại.");
       }
@@ -53,6 +55,3 @@
   </script>
 </body>
 </html>
-
-
-
